@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Grace Community - Artículos de crecimiento espiritual, noticias comunitarias, devocionales diarios y recursos para fortalecer tu fe. Contenido auténtico en español, inglés y portugués.">
+    <meta name="keywords" content="blog cristiano, crecimiento espiritual, devocionales, artículos de fe, noticias iglesia, recursos espirituales, testimonios">
+    <title>Blog - Iglesia Global de Restauración</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fgracecomm2101back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-primary text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-border-subtle">
+        <div class="container-custom">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center gap-3 group">
+                    <img 
+        src="images/llama sola .png"
+        alt="Logotipo Iglesia Global de Restauración"
+        class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+    />
+                    <span class="font-headline text-2xl font-bold text-gradient-gold">Iglesia Global de Restauración</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html" class="nav-link">Inicio</a>
+                    <a href="about.html" class="nav-link">Conócenos</a>
+                    <a href="sermons.html" class="nav-link">Prédicas</a>
+                    <a href="projects.html" class="nav-link">Proyectos</a>
+                    <a href="blog.html" class="nav-link-active">Blog</a>
+                    <a href="donations.html" class="btn-primary text-sm">Donar</a>
+                </div>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex items-center gap-2 bg-surface px-3 py-2 rounded-lg">
+                        <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors" aria-label="Cambiar a español">ES</button>
+                        <span class="text-text-tertiary">|</span>
+                        <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Switch to English">EN</button>
+                        <span class="text-text-tertiary">|</span>
+                        <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Mudar para português">PT</button>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-surface rounded-lg transition-colors" aria-label="Abrir menú de navegación">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-surface border-t border-border-subtle">
+            <div class="container-custom py-6 space-y-4">
+                <a href="homepage.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Inicio</a>
+                <a href="about.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Conócenos</a>
+                <a href="sermons.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Prédicas</a>
+                <a href="projects.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Proyectos</a>
+                <a href="blog.html" class="block py-2 text-secondary font-medium">Blog</a>
+                <a href="donations.html" class="btn-primary w-full justify-center mt-4">Donar Ahora</a>
+                <div class="flex items-center gap-4 pt-4 border-t border-border-subtle">
+                    <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary">Español</button>
+                    <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
+                    <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sticky Donation Button -->
+    <a href="https://wa.me/573171555338?text=Hola%20quiero%20información" 
+   target="_blank"
+   class="fixed bottom-8 right-8 z-40 flex items-center justify-center w-16 h-16 rounded-full shadow-lg transition-all duration-300 group"
+   style="background: linear-gradient(135deg, #d4af37, #c89b3c); box-shadow: 0 0 20px rgba(200,155,60,0.5);"
+   aria-label="Contactar por WhatsApp">
+
+    <!-- Icono WhatsApp -->
+    <svg class="w-8 h-8 transition-transform group-hover:scale-110" fill="white" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.82 11.82 0 0012.01 0C5.37 0 .01 5.36.01 12c0 2.11.55 4.17 1.59 5.99L0 24l6.18-1.61A11.93 11.93 0 0012.01 24c6.64 0 12-5.36 12-12 0-3.19-1.24-6.19-3.49-8.52zM12 21.82c-1.82 0-3.59-.49-5.14-1.41l-.37-.22-3.67.96.98-3.57-.24-.37A9.79 9.79 0 012.2 12C2.2 6.59 6.59 2.2 12 2.2c2.61 0 5.07 1.02 6.92 2.87A9.75 9.75 0 0121.8 12c0 5.41-4.39 9.82-9.8 9.82zm5.39-7.34c-.29-.14-1.72-.85-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.2 3.03c.14.19 2.07 3.16 5.02 4.43.7.3 1.24.48 1.67.61.7.22 1.34.19 1.85.11.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.56-.34z"/>
+    </svg>
+
+</a>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1592313600255-cf303498a522" 
+                 alt="Persona escribiendo en diario con Biblia abierta, ambiente de reflexión espiritual y crecimiento personal" 
+                 class="w-full h-full object-cover"
+                 loading="eager"
+                 onerror="this.src='https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container-custom relative z-10 text-center px-4 py-16">
+            <div class="max-w-4xl mx-auto space-y-6 fade-in">
+                <h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                    Blog & <span class="text-gradient-gold">recursos</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-text-secondary font-body leading-relaxed max-w-3xl mx-auto">
+                    Crecimiento espiritual a través de contenido auténtico, devocionales inspiradores y noticias de nuestra comunidad
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="section bg-background">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section bg-primary">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <span class="badge-gold mb-4">Artículo Destacado</span>
+                <h2 class="font-headline text-3xl md:text-4xl font-bold">
+                    Lo Más <span class="text-gradient-gold">reciente</span>
+                </h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <article class="card-gold group hover:scale-[1.02] transition-all duration-300">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <!-- Featured Image -->
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="images/paz.jpg" 
+                                 alt="Persona meditando en la naturaleza al amanecer, simbolizando paz interior y conexión espiritual profunda" 
+                                 class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                                 loading="lazy"
+                                 onerror="this.src='https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                            <div class="absolute top-4 left-4">
+                                <span class="badge-success">Nuevo</span>
+                            </div>
+                        </div>
+
+                        <!-- Featured Content -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 text-sm text-text-secondary">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    3 de Diciembre, 2025
+                                </span>
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                                    </svg>
+                                    Contenido cristiano
+                                </span>
+                            </div>
+
+                            <h3 class="font-headline text-3xl md:text-4xl font-bold leading-tight">
+                                Encontrando paz en medio del caos
+                            </h3>
+
+                            <p class="text-text-secondary leading-relaxed text-lg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repudiandae expedita saepe qui exercitationem, quis debitis suscipit modi natus, deserunt molestias praesentium eum consequatur quod.
+                            </p>
+
+                            <div class="flex items-center gap-4 pt-4">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_18e77098f-1763296614497.png" 
+                                     alt="Retrato de Pastora María González, autora del artículo, sonriendo con calidez y profesionalismo" 
+                                     class="w-12 h-12 rounded-full object-cover border-2 border-secondary"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop'; this.onerror=null;">
+                                <div>
+                                    <p class="font-semibold text-text-primary">María González</p>
+                                    <!-- <p class="text-sm text-text-tertiary">Pastora de Mujeres y Familias</p> -->
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 pt-4">
+                                <a href="javascript:void(0)" class="btn-primary flex-1 justify-center" onclick="readArticle('featured')">
+                                    Leer Artículo Completo
+                                </a>
+                                <button onclick="shareArticle('featured')" class="btn-outline px-4" aria-label="Compartir artículo">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles Grid -->
+    <section class="section bg-background">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">
+                    Artículos <span class="text-gradient-gold">recientes</span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    Explora contenido que fortalece tu fe y te conecta con nuestra comunidad
+                </p>
+            </div>
+
+            <div id="articlesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 - Spiritual Growth -->
+                <article class="card group hover:shadow-gold transition-all duration-300" data-category="spiritual-growth">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1551467887-2fb6485ec545" 
+                             alt="Grupo pequeño de personas estudiando la Biblia juntos, compartiendo en comunidad íntima y cálida" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        <div class="absolute top-4 left-4">
+                            <!-- <span class="badge bg-accent/20 text-accent border-accent/30">Crecimiento</span> -->
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-text-tertiary">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                28 Nov 2025
+                            </span>
+                            <span>•</span>
+                            <span>5 min lectura</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-semibold leading-tight group-hover:text-secondary transition-colors">
+                            El poder de la comunidad en el crecimiento espiritual
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem dolores voluptatem quae repudiandae blanditiis? Et!
+                        </p>
+                        <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center gap-2">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1883b5ac4-1763299482546.png" 
+                                     alt="Retrato de Pastor Carlos Mendoza, autor del artículo" 
+                                     class="w-8 h-8 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50'; this.onerror=null;">
+                                <span class="text-sm text-text-secondary">Pastor Carlos</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="readArticle('article1')" class="text-secondary hover:text-accent transition-colors font-medium text-sm flex items-center gap-1">
+                                Leer más
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 - Devotional -->
+                <article class="card group hover:shadow-gold transition-all duration-300" data-category="devotionals">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1591101053497-e782f8134367" 
+                             alt="Biblia abierta con taza de café en mesa de madera, ambiente de reflexión matutina tranquila" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        <div class="absolute top-4 left-4">
+                            <!-- <span class="badge bg-success/20 text-success border-success/30">Devocional</span> -->
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-text-tertiary">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                25 Nov 2025
+                            </span>
+                            <span>•</span>
+                            <span>3 min lectura</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-semibold leading-tight group-hover:text-secondary transition-colors">
+                            Devocional diario: Confianza en tiempos difíciles
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid inventore doloremque vitae omnis aliquam optio!
+                        </p>
+                        <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center gap-2">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_142d3c9bf-1763301932985.png" 
+                                     alt="Retrato de Pastora María González, autora del devocional" 
+                                     class="w-8 h-8 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=50&auto=format&fit=crop'; this.onerror=null;">
+                                <span class="text-sm text-text-secondary">Pastora María</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="readArticle('article2')" class="text-secondary hover:text-accent transition-colors font-medium text-sm flex items-center gap-1">
+                                Leer más
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 - Community News -->
+                <article class="card group hover:shadow-gold transition-all duration-300" data-category="community-news">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_128be3abb-1764670230295.png" 
+                             alt="Comunidad celebrando evento especial con alegría, personas de diferentes edades compartiendo juntas" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                        <div class="absolute top-4 left-4">
+                            <!-- <span class="badge bg-warning/20 text-warning border-warning/30">Noticias</span> -->
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-text-tertiary">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                22 Nov 2025
+                            </span>
+                            <span>•</span>
+                            <span>4 min lectura</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-semibold leading-tight group-hover:text-secondary transition-colors">
+                            Celebrando 15 años de ministerio comunitario
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis eveniet tenetur modi, consectetur error sit!
+                        </p>
+                        <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center gap-2">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1ca5ca16b-1763296399047.png" 
+                                     alt="Retrato de Pastor David Ramírez, autor del artículo" 
+                                     class="w-8 h-8 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=50&auto=format&fit=crop'; this.onerror=null;">
+                                <span class="text-sm text-text-secondary">Pastor David</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="readArticle('article3')" class="text-secondary hover:text-accent transition-colors font-medium text-sm flex items-center gap-1">
+                                Leer más
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 - Testimony -->
+                <article class="card group hover:shadow-gold transition-all duration-300" data-category="testimonies">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_14bbf4e56-1764664530851.png" 
+                             alt="Persona con manos levantadas en adoración, expresión de gratitud y transformación espiritual" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        <div class="absolute top-4 left-4">
+                            <!-- <span class="badge bg-secondary/20 text-secondary border-secondary/30">Testimonio</span> -->
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-text-tertiary">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                20 Nov 2025
+                            </span>
+                            <span>•</span>
+                            <span>6 min lectura</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-semibold leading-tight group-hover:text-secondary transition-colors">
+                            De la oscuridad a la luz: Mi historia de restauración
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione soluta voluptate magni. Vel, facere nihil.
+                        </p>
+                        <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center gap-2">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1b0470d7f-1763301569686.png" 
+                                     alt="Retrato de Ana Martínez compartiendo su testimonio" 
+                                     class="w-8 h-8 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=50'; this.onerror=null;">
+                                <span class="text-sm text-text-secondary">Ana Martínez</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="readArticle('article4')" class="text-secondary hover:text-accent transition-colors font-medium text-sm flex items-center gap-1">
+                                Leer más
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 - Events -->
+                <article class="card group hover:shadow-gold transition-all duration-300" data-category="events">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="images/conferencia.jpg" 
+                             alt="Audiencia en evento comunitario, personas atentas y comprometidas en actividad grupal" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        <div class="absolute top-4 left-4">
+                            <!-- <span class="badge-warning">Próximo Evento</span> -->
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-text-tertiary">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                18 Nov 2025
+                            </span>
+                            <span>•</span>
+                            <span>2 min lectura</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-semibold leading-tight group-hover:text-secondary transition-colors">
+                            Conferencia de Liderazgo Juvenil 2025
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim veniam deleniti at consectetur reiciendis.
+                        </p>
+                        <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center gap-2">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_140d98735-1763296005986.png" 
+                                     alt="Retrato de Pastor David Ramírez, organizador del evento" 
+                                     class="w-8 h-8 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=50&auto=format&fit=crop'; this.onerror=null;">
+                                <span class="text-sm text-text-secondary">Pastor David</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="rsvpEvent('event1')" class="text-secondary hover:text-accent transition-colors font-medium text-sm flex items-center gap-1">
+                                Leer más
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 - Spiritual Growth -->
+                <article class="card group hover:shadow-gold transition-all duration-300" data-category="spiritual-growth">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_19a4a8b3c-1764805145506.png" 
+                             alt="Persona leyendo Biblia con notas de estudio, ambiente de aprendizaje profundo y dedicación" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        <div class="absolute top-4 left-4">
+                            <!-- <span class="badge bg-accent/20 text-accent border-accent/30">Crecimiento</span> -->
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-text-tertiary">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                15 Nov 2025
+                            </span>
+                            <span>•</span>
+                            <span>7 min lectura</span>
+                        </div>
+                        <h3 class="font-headline text-2xl font-semibold leading-tight group-hover:text-secondary transition-colors">
+                            Cinco hábitos espirituales que transformarán tu vida
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minima non, nihil dolorem mollitia placeat!
+                        </p>
+                        <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center gap-2">
+                                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1883b5ac4-1763299482546.png" 
+                                     alt="Retrato de Pastor Carlos Mendoza, autor del artículo" 
+                                     class="w-8 h-8 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50'; this.onerror=null;">
+                                <span class="text-sm text-text-secondary">Pastor Carlos</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="readArticle('article6')" class="text-secondary hover:text-accent transition-colors font-medium text-sm flex items-center gap-1">
+                                Leer más
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button onclick="loadMoreArticles()" class="btn-secondary">
+                    Cargar Más Artículos
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="section bg-surface">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <svg class="w-16 h-16 text-secondary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">
+                    Mantente <span class="text-gradient-gold">conectado</span>
+                </h2>
+                <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                    Recibe actualizaciones semanales, devocionales inspiradores <br>y noticias de la comunidad directamente en tu correo
+                </p>
+                
+                <form class="max-w-xl mx-auto" onsubmit="handleNewsletterSubmit(event)">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input 
+                            type="email" 
+                            placeholder="Tu correo electrónico" 
+                            required
+                            class="form-input flex-1"
+                            aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn-primary whitespace-nowrap">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Suscribirme
+                        </button>
+                    </div>
+                    <p class="text-text-tertiary text-sm mt-4">
+                        Al suscribirte, aceptas recibir correos de la Igleisa Global de Restauración. <br> Puedes cancelar en cualquier momento.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+                    
+
+    <!-- === BARRA DE INFORMACIÓN AÑADIDA === -->
+  <section class="ticker">
+    <div class="ticker-track">
+      <span><i class="far fa-clock mr-2"></i>Sábados 6:00pm – 8:00pm</span>
+      <span>•</span>
+      <span><i class="far fa-clock mr-2"></i>Domingos 10:00am – 12:00pm</span>
+      <span>•</span>
+      <span><i class="fas fa-map-marker-alt mr-2"></i>CRA 80E #40 - 131, 3er piso — Medellín</span>
+      <span>•</span>
+      <span><i class="fa-brands fa-whatsapp mr-2"></i>+57 318 517 21 11</span>
+      <!-- Duplicado para continuidad -->
+      <span><i class="far fa-clock ml-8 mr-2"></i>Sábados 6:00pm – 8:00pm</span>
+      <span>•</span>
+      <span><i class="far fa-clock mr-2"></i>Domingos 10:00am – 12:00pm</span>
+      <span>•</span>
+      <span><i class="fas fa-map-marker-alt mr-2"></i>CRA 80E #40 - 131, 3er piso — Medellín</span>
+      <span>•</span>
+      <span><i class="fa-brands fa-whatsapp mr-2"></i>+57 318 517 21 11</span>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-border-subtle py-12">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img 
+        src="images/llama sola .png"
+        alt="Logotipo Iglesia Global de Restauración"
+        class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+    />
+                        <span class="font-headline text-xl font-bold text-gradient-gold">Iglesia Global <br>de Restauración</span>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus ex possimus placeat ipsa officia. Aut praesentium nihil quae molestias quo?
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="javascript:void(0)" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Visitar Facebook">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/results?search_query=iglesia+global+de+restauracion" target="_blank" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Visitar YouTube">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/iglesiaigrmedellin/" target="_blank" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Visitar Instagram">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="javascript:void(0)" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Contactar por WhatsApp">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                <a href="https://open.spotify.com/user/31hsaeis4m65pwdcl3vvytc5ymfq" 
+   target="_blank" 
+   rel="noopener"
+   class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+   aria-label="Visitar Spotify de la Iglesia">
+    <svg class="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 0C5.371 0 0 5.372 0 12c0 6.627 5.371 12 12 12s12-5.373 12-12C24 5.372 18.629 0 12 0zm5.485 17.297a.748.748 0 0 1-1.028.248c-2.818-1.724-6.36-2.114-10.542-1.157a.75.75 0 0 1-.33-1.464c4.57-1.03 8.52-.59 11.676 1.307a.75.75 0 0 1 .224 1.066zm1.42-3.158a.93.93 0 0 1-1.273.31c-3.224-1.982-8.14-2.56-11.93-1.403a.932.932 0 0 1-1.14-.63.93.93 0 0 1 .63-1.14c4.36-1.338 9.77-.694 13.48 1.65a.93.93 0 0 1 .233 1.213zm.12-3.403c-3.79-2.253-10.071-2.46-13.694-1.36a1.11 1.11 0 1 1-.64-2.13c4.19-1.26 11.18-1.016 15.59 1.584a1.11 1.11 0 0 1-1.156 1.906z"/>
+    </svg>
+</a>
+                        
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4 text-secondary">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-text-secondary hover:text-secondary transition-colors">Inicio</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-secondary transition-colors">Conócenos</a></li>
+                        <li><a href="sermons.html" class="text-text-secondary hover:text-secondary transition-colors">Prédicas</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-secondary transition-colors">Proyectos</a></li>
+                        <li><a href="blog.html" class="text-text-secondary hover:text-secondary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4 text-secondary">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="sermons.html" class="text-text-secondary hover:text-secondary transition-colors">Biblioteca de Prédicas</a></li>
+                        <li><a href="blog.html" class="text-text-secondary hover:text-secondary transition-colors">Devocionales</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Kids</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Peticiones de Oración</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Eventos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4 text-secondary">Contacto</h3>
+                    <ul class="space-y-3 text-text-secondary">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-sm">Cra. 80E # 40-131 int 301 Laureles, Colombia</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <a href="tel:+525512345678" class="text-sm hover:text-secondary transition-colors">+57 555 55 55</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:info@gracecommunity.org" class="text-sm hover:text-secondary transition-colors">info@igriglesia.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
+                <p class="text-text-secondary text-sm text-center md:text-left">
+                    © 2025 Iglesia Global de Restauración. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Política de Privacidad</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Language Switcher
+        function switchLanguage(lang) {
+            console.log('Switching to language:', lang);
+            alert(`Cambiando idioma a: ${lang.toUpperCase()}`);
+        }
+
+        // Category Filter
+        let currentCategory = 'all';
+
+        function filterCategory(category) {
+            currentCategory = category;
+            const articles = document.querySelectorAll('#articlesGrid article');
+            const buttons = document.querySelectorAll('[data-category]');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = 'badge-gold cursor-pointer hover:bg-secondary hover:text-primary transition-all';
+                } else {
+                    btn.className = 'badge bg-surface-light text-text-secondary border-border-subtle hover:border-secondary hover:text-secondary transition-all cursor-pointer';
+                }
+            });
+
+            // Filter articles
+            articles.forEach(article => {
+                if (category === 'all' || article.dataset.category === category) {
+                    article.style.display = 'block';
+                    article.classList.add('fade-in');
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const articles = document.querySelectorAll('#articlesGrid article');
+
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const content = article.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+
+        // Article Actions
+        function readArticle(articleId) {
+            console.log('Reading article:', articleId);
+            alert('Abriendo artículo completo...');
+        }
+
+        function shareArticle(articleId) {
+            console.log('Sharing article:', articleId);
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Grace Community Blog',
+                    text: 'Mira este artículo inspirador',
+                    url: window.location.href
+                }).catch(err => console.log('Error sharing:', err));
+            } else {
+                alert('Función de compartir no disponible. Copia el enlace: ' + window.location.href);
+            }
+        }
+
+        function rsvpEvent(eventId) {
+            console.log('RSVP for event:', eventId);
+            alert('Redirigiendo al formulario de registro...');
+        }
+
+        // Load More Articles
+        function loadMoreArticles() {
+            alert('Cargando más artículos...');
+            // In a real implementation, this would fetch more articles from the server
+        }
+
+        // Newsletter Form Submission
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert(`¡Gracias por suscribirte! Confirmaremos tu suscripción en ${email}`);
+            event.target.reset();
+        }
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .card-elevated, .card-gold').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Scroll to Top on Page Load
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>

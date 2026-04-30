@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grace Community - Proyectos Activos | Transforma vidas a través de donaciones específicas, voluntariado y apoyo comunitario. Descubre cómo tu generosidad crea impacto real.">
+    <meta name="keywords" content="proyectos comunitarios, donaciones, voluntariado, impacto social, caridad cristiana, ayuda comunitaria">
+    <title>Proyectos - Iglesia Global de Restauración</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fgracecomm2101back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-primary text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-border-subtle">
+        <div class="container-custom">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center gap-3 group">
+                    <img 
+        src="images/llama sola .png"
+        alt="Logotipo Iglesia Global de Restauración"
+        class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+    />
+                    
+                    <span class="font-headline text-2xl font-bold text-gradient-gold">Iglesia Global de Restauración</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html" class="nav-link">Inicio</a>
+                    <a href="about.html" class="nav-link">Conócenos</a>
+                    <a href="sermons.html" class="nav-link">Prédicas</a>
+                    <a href="projects.html" class="nav-link-active">Proyectos</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="donations.html" class="btn-primary text-sm">Donar</a>
+                </div>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex items-center gap-2 bg-surface px-3 py-2 rounded-lg">
+                        <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors" aria-label="Cambiar a español">ES</button>
+                        <span class="text-text-tertiary">|</span>
+                        <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Switch to English">EN</button>
+                        <span class="text-text-tertiary">|</span>
+                        <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Mudar para português">PT</button>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-surface rounded-lg transition-colors" aria-label="Abrir menú de navegación">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-surface border-t border-border-subtle">
+            <div class="container-custom py-6 space-y-4">
+                <a href="homepage.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Inicio</a>
+                <a href="about.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Conócenos</a>
+                <a href="sermons.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Prédicas</a>
+                <a href="projects.html" class="block py-2 text-secondary font-medium">Proyectos</a>
+                <a href="blog.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Blog</a>
+                <a href="donations.html" class="btn-primary w-full justify-center mt-4">Donar Ahora</a>
+                <div class="flex items-center gap-4 pt-4 border-t border-border-subtle">
+                    <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary">Español</button>
+                    <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
+                    <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sticky Donation Button -->
+    <a href="https://wa.me/573171555338?text=Hola%20quiero%20información" 
+   target="_blank"
+   class="fixed bottom-8 right-8 z-40 flex items-center justify-center w-16 h-16 rounded-full shadow-lg transition-all duration-300 group"
+   style="background: linear-gradient(135deg, #d4af37, #c89b3c); box-shadow: 0 0 20px rgba(200,155,60,0.5);"
+   aria-label="Contactar por WhatsApp">
+
+    <!-- Icono WhatsApp -->
+    <svg class="w-8 h-8 transition-transform group-hover:scale-110" fill="white" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.82 11.82 0 0012.01 0C5.37 0 .01 5.36.01 12c0 2.11.55 4.17 1.59 5.99L0 24l6.18-1.61A11.93 11.93 0 0012.01 24c6.64 0 12-5.36 12-12 0-3.19-1.24-6.19-3.49-8.52zM12 21.82c-1.82 0-3.59-.49-5.14-1.41l-.37-.22-3.67.96.98-3.57-.24-.37A9.79 9.79 0 012.2 12C2.2 6.59 6.59 2.2 12 2.2c2.61 0 5.07 1.02 6.92 2.87A9.75 9.75 0 0121.8 12c0 5.41-4.39 9.82-9.8 9.82zm5.39-7.34c-.29-.14-1.72-.85-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.2 3.03c.14.19 2.07 3.16 5.02 4.43.7.3 1.24.48 1.67.61.7.22 1.34.19 1.85.11.56-.08 1.72-.7 1.96-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.56-.34z"/>
+    </svg>
+
+</a>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_130229536-1764666625703.png" 
+                 alt="Voluntarios trabajando juntos en proyecto comunitario, ambiente de colaboración y esperanza transformadora" 
+                 class="w-full h-full object-cover"
+                 loading="eager"
+                 onerror="this.src='https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container-custom relative z-10 text-center px-4 py-16">
+            <div class="max-w-4xl mx-auto space-y-6 fade-in">
+                <h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                    Proyectos que <span class="text-gradient-gold">transforman vidas</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-text-secondary font-body leading-relaxed max-w-3xl mx-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur id nesciunt iure, fugit perspiciatis velit? Dolore aliquam natus pariatur exercitationem?
+                </p>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Featured Projects Section -->
+    <section class="section bg-primary">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                    Proyectos <span class="text-gradient-gold">destacados</span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, harum.
+                </p>
+            </div>
+
+            <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Fundación Faro -->
+                <div class="card-gold group hover:scale-105 transition-all duration-300 project-card" data-category="active urgent">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="images/logo-faro.png" 
+                             alt="Niños sonrientes recibiendo comidas nutritivas en programa comunitario, expresiones de gratitud y esperanza renovada" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://img.rocket.new/generatedImages/rocket_gen_img_166d0e888-1764805145525.png'; this.onerror=null;">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <!-- <span class="badge-gold">Destacado</span>
+                            <span class="badge-warning">Urgente</span> -->
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-sm rounded-lg px-3 py-2">
+                            <div class="flex items-center gap-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-headline text-2xl font-semibold mb-2 text-secondary">Fundación Faro</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto commodi tenetur ab nobis, voluptatem eligendi?
+                            </p>
+                        </div>
+
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3 pt-2">
+                            <button onclick="openDonationModal('alimentando-esperanza')" class="btn-primary flex-1 justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                                Donar Ahora
+                            </button>
+                            <button onclick="shareProject('alimentando-esperanza')" class="btn-outline px-4" aria-label="Compartir proyecto">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Becas Educativas -->
+                <div class="card group hover:scale-105 transition-all duration-300 project-card" data-category="active">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="images/union-valle.jpg" 
+                             alt="Unión valle" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        <!-- <div class="absolute top-4 left-4">
+                            <span class="badge-success">Activo</span>
+                        </div> -->
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-headline text-2xl font-semibold mb-2">Unión Valle del Cauca</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur reiciendis praesentium sunt nemo unde quas?
+                            </p>
+                        </div>
+
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3 pt-2">
+                            <button onclick="openDonationModal('becas-educativas')" class="btn-primary flex-1 justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                                Donar Ahora
+                            </button>
+                            <button onclick="shareProject('becas-educativas')" class="btn-outline px-4" aria-label="Compartir proyecto">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Centro Comunitario -->
+                <div class="card group hover:scale-105 transition-all duration-300 project-card" data-category="active urgent">
+                    <div class="relative mb-6 overflow-hidden rounded-xl">
+                        <img src="images/misiones.jpg" 
+                             alt="Misiones" 
+                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                        
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-headline text-2xl font-semibold mb-2">Misioneros</h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, in! Nisi, numquam unde? Rerum, provident.
+                            </p>
+                        </div>
+
+                
+
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3 pt-2">
+                            <button onclick="openDonationModal('centro-comunitario')" class="btn-primary flex-1 justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                                Donar Ahora
+                            </button>
+                            <button onclick="shareProject('centro-comunitario')" class="btn-outline px-4" aria-label="Compartir proyecto">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+        </div>
+    </section>
+
+
+
+    <!-- Impact Stories Section -->
+    <section class="section bg-primary">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                    Historias de <span class="text-gradient-gold">impacto</span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    Testimonios auténticos de vidas transformadas
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Impact Story 1 -->
+                <div class="card-elevated">
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1719822554996-bbf672c7d4e8" 
+                             alt="Retrato de María López, beneficiaria del programa de becas, sonriendo con esperanza y gratitud" 
+                             class="w-20 h-20 rounded-full object-cover border-2 border-secondary"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-lg text-text-primary">María López</h4>
+                            <p class="text-text-secondary text-sm">Lorem, ipsum.</p>
+                            <div class="flex items-center gap-1 mt-2">
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <svg class="w-8 h-8 text-secondary/30" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quod quae? Culpa, ipsa. Quidem delectus odio deserunt unde accusamus nostrum.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm text-text-tertiary">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Noviembre 2025</span>
+                    </div>
+                </div>
+
+                <!-- Impact Story 2 -->
+                <div class="card-elevated">
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1894d3a94-1764805142716.png" 
+                             alt="Retrato de Carlos Ramírez, beneficiario del programa de alimentación, expresando gratitud y renovada esperanza" 
+                             class="w-20 h-20 rounded-full object-cover border-2 border-secondary"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-semibold text-lg text-text-primary">Carlos Ramírez</h4>
+                            <p class="text-text-secondary text-sm">Lorem, ipsum.</p>
+                            <div class="flex items-center gap-1 mt-2">
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <svg class="w-8 h-8 text-secondary/30" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illum magni culpa esse explicabo, error saepe odit soluta commodi dolorem.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm text-text-tertiary">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Octubre 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Stories -->
+            <div class="text-center mt-12">
+                <a href="blog.html" class="btn-secondary">
+                    Leer Más Historias
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- === BARRA DE INFORMACIÓN AÑADIDA === -->
+  <section class="ticker">
+    <div class="ticker-track">
+      <span><i class="far fa-clock mr-2"></i>Sábados 6:00pm – 8:00pm</span>
+      <span>•</span>
+      <span><i class="far fa-clock mr-2"></i>Domingos 10:00am – 12:00pm</span>
+      <span>•</span>
+      <span><i class="fas fa-map-marker-alt mr-2"></i>CRA 80E #40 - 131, 3er piso — Medellín</span>
+      <span>•</span>
+      <span><i class="fa-brands fa-whatsapp mr-2"></i>+57 318 517 21 11</span>
+      <!-- Duplicado para continuidad -->
+      <span><i class="far fa-clock ml-8 mr-2"></i>Sábados 6:00pm – 8:00pm</span>
+      <span>•</span>
+      <span><i class="far fa-clock mr-2"></i>Domingos 10:00am – 12:00pm</span>
+      <span>•</span>
+      <span><i class="fas fa-map-marker-alt mr-2"></i>CRA 80E #40 - 131, 3er piso — Medellín</span>
+      <span>•</span>
+      <span><i class="fa-brands fa-whatsapp mr-2"></i>+57 318 517 21 11</span>
+    </div>
+  </section>
+
+    <footer class="bg-primary border-t border-border-subtle py-12">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img 
+        src="images/llama sola .png"
+        alt="Logotipo Iglesia Global de Restauración"
+        class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+    />
+                        
+                        <span class="font-headline text-xl font-bold text-gradient-gold">Iglesia Global <br>de Restauración</span>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus ex possimus placeat ipsa officia. Aut praesentium nihil quae molestias quo?
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="javascript:void(0)" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Visitar Facebook">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/results?search_query=iglesia+global+de+restauracion" target="_blank" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Visitar YouTube">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/iglesiaigrmedellin/" target="_blank" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Visitar Instagram">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="javascript:void(0)" class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Contactar por WhatsApp">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                <a href="https://open.spotify.com/user/31hsaeis4m65pwdcl3vvytc5ymfq" 
+   target="_blank" 
+   rel="noopener"
+   class="bg-surface hover:bg-secondary w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+   aria-label="Visitar Spotify de la Iglesia">
+    <svg class="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 0C5.371 0 0 5.372 0 12c0 6.627 5.371 12 12 12s12-5.373 12-12C24 5.372 18.629 0 12 0zm5.485 17.297a.748.748 0 0 1-1.028.248c-2.818-1.724-6.36-2.114-10.542-1.157a.75.75 0 0 1-.33-1.464c4.57-1.03 8.52-.59 11.676 1.307a.75.75 0 0 1 .224 1.066zm1.42-3.158a.93.93 0 0 1-1.273.31c-3.224-1.982-8.14-2.56-11.93-1.403a.932.932 0 0 1-1.14-.63.93.93 0 0 1 .63-1.14c4.36-1.338 9.77-.694 13.48 1.65a.93.93 0 0 1 .233 1.213zm.12-3.403c-3.79-2.253-10.071-2.46-13.694-1.36a1.11 1.11 0 1 1-.64-2.13c4.19-1.26 11.18-1.016 15.59 1.584a1.11 1.11 0 0 1-1.156 1.906z"/>
+    </svg>
+</a>
+                        
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4 text-secondary">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-text-secondary hover:text-secondary transition-colors">Inicio</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-secondary transition-colors">Conócenos</a></li>
+                        <li><a href="sermons.html" class="text-text-secondary hover:text-secondary transition-colors">Prédicas</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-secondary transition-colors">Proyectos</a></li>
+                        <li><a href="blog.html" class="text-text-secondary hover:text-secondary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4 text-secondary">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="sermons.html" class="text-text-secondary hover:text-secondary transition-colors">Biblioteca de Prédicas</a></li>
+                        <li><a href="blog.html" class="text-text-secondary hover:text-secondary transition-colors">Devocionales</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Kids</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Peticiones de Oración</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Eventos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4 text-secondary">Contacto</h3>
+                    <ul class="space-y-3 text-text-secondary">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-sm">Cra. 80E # 40-131 int 301 Laureles, Colombia</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <a href="tel:+525512345678" class="text-sm hover:text-secondary transition-colors">+57 555 55 55</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:info@gracecommunity.org" class="text-sm hover:text-secondary transition-colors">info@igriglesia.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
+                <p class="text-text-secondary text-sm text-center md:text-left">
+                    © 2025 Iglesia Global de Restauración. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Política de Privacidad</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-colors">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Language Switcher
+        function switchLanguage(lang) {
+            console.log('Switching to language:', lang);
+            alert(`Cambiando idioma a: ${lang.toUpperCase()}`);
+        }
+
+        // Project Filtering
+        function filterProjects(category) {
+            const projectCards = document.querySelectorAll('.project-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            // Update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('btn-primary', 'active');
+                btn.classList.add('btn-outline');
+            });
+            event.target.classList.remove('btn-outline');
+            event.target.classList.add('btn-primary', 'active');
+
+            // Filter projects
+            projectCards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const categories = card.dataset.category.split(' ');
+                    card.style.display = categories.includes(category) ? 'block' : 'none';
+                }
+            });
+        }
+
+        // Reset Filters
+        function resetFilters() {
+            const projectCards = document.querySelectorAll('.project-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const searchInput = document.getElementById('projectSearch');
+
+            // Reset search
+            searchInput.value = '';
+
+            // Reset filter buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove('btn-primary', 'active');
+                btn.classList.add('btn-outline');
+            });
+            filterButtons[0].classList.remove('btn-outline');
+            filterButtons[0].classList.add('btn-primary', 'active');
+
+            // Show all projects
+            projectCards.forEach(card => {
+                card.style.display = 'block';
+            });
+        }
+
+        // Project Search
+        document.getElementById('projectSearch').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Load More Projects
+        function loadMoreProjects() {
+            alert('Cargando más proyectos... Esta funcionalidad se implementará con datos dinámicos.');
+        }
+
+        // Donation Modal
+        function openDonationModal(projectId) {
+            const modal = document.getElementById('donationModal');
+            const projectInput = document.getElementById('selectedProject');
+            
+            // Map project IDs to names
+            const projectNames = {
+                'alimentando-esperanza': 'Alimentando Esperanza',
+                'becas-educativas': 'Becas Educativas',
+                'centro-comunitario': 'Centro Comunitario',
+                'clinica-movil': 'Clínica Médica Móvil',
+                'refugio-temporal': 'Refugio Temporal'
+            };
+
+            projectInput.value = projectNames[projectId] || 'Proyecto Seleccionado';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDonationModal() {
+            const modal = document.getElementById('donationModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function setDonationAmount(amount) {
+            document.getElementById('donationAmount').value = amount;
+        }
+
+        function handleDonationSubmit(event) {
+            event.preventDefault();
+            const amount = document.getElementById('donationAmount').value;
+            const project = document.getElementById('selectedProject').value;
+            alert(`¡Gracias por tu donación de $${amount} USD para ${project}! Procesando tu pago de forma segura...`);
+            closeDonationModal();
+        }
+
+        // Volunteer Modal
+        function openVolunteerForm(positionId) {
+            const modal = document.getElementById('volunteerModal');
+            const positionInput = document.getElementById('selectedPosition');
+            
+            // Map position IDs to names
+            const positionNames = {
+                'coordinador-alimentos': 'Coordinador de Alimentos',
+                'tutor-academico': 'Tutor Académico',
+                'asistente-construccion': 'Asistente de Construcción'
+            };
+
+            positionInput.value = positionNames[positionId] || 'Posición Seleccionada';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVolunteerModal() {
+            const modal = document.getElementById('volunteerModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleVolunteerSubmit(event) {
+            event.preventDefault();
+            const position = document.getElementById('selectedPosition').value;
+            alert(`¡Gracias por tu interés en ser voluntario como ${position}! Revisaremos tu aplicación y te contactaremos pronto.`);
+            closeVolunteerModal();
+        }
+
+        // Share Project
+        function shareProject(projectId) {
+            const projectNames = {
+                'alimentando-esperanza': 'Alimentando Esperanza',
+                'becas-educativas': 'Becas Educativas',
+                'centro-comunitario': 'Centro Comunitario',
+                'clinica-movil': 'Clínica Médica Móvil',
+                'refugio-temporal': 'Refugio Temporal',
+                'capacitacion-laboral': 'Capacitación Laboral'
+            };
+
+            const projectName = projectNames[projectId];
+            const shareText = `¡Apoya el proyecto "${projectName}" de Grace Community! Juntos podemos transformar vidas.`;
+            const shareUrl = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: projectName,
+                    text: shareText,
+                    url: shareUrl
+                }).catch(err => console.log('Error sharing:', err));
+            } else {
+                // Fallback: Copy to clipboard
+                navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
+                alert('¡Enlace copiado al portapapeles! Compártelo en tus redes sociales.');
+            }
+        }
+
+        // Close modals on outside click
+        document.getElementById('donationModal').addEventListener('click', (e) => {
+            if (e.target.id === 'donationModal') {
+                closeDonationModal();
+            }
+        });
+
+        document.getElementById('volunteerModal').addEventListener('click', (e) => {
+            if (e.target.id === 'volunteerModal') {
+                closeVolunteerModal();
+            }
+        });
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeDonationModal();
+                closeVolunteerModal();
+            }
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .card-elevated, .card-gold').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Scroll to Top on Page Load
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>
