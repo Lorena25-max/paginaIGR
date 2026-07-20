@@ -68,12 +68,25 @@ module.exports = {
           focus: "#f4d03f", // yellow-400 - Active states
         },
       },
+
       fontFamily: {
-        headline: ['Playfair Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
-        cta: ['Inter', 'sans-serif'],
-        accent: ['Playfair Display', 'serif'],
-      },
+  headline: ['Mark', 'sans-serif'],
+  body: ['Mark', 'sans-serif'],
+  cta: ['Mark', 'sans-serif'],
+  accent: ['SophiaReign', 'cursive'],
+  script: ['SwashBandakala', 'cursive'],
+},
+
+fontWeight: {
+  light: '300',
+  normal: '400',
+  medium: '500',
+  bold: '700',
+  black: '900',
+},
+      
+
+
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.875rem', { lineHeight: '1.25rem' }],

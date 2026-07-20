@@ -1,5 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@font-face {
+  font-family: 'Mark';
+  src: url('../fonts/Mark-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark';
+  src: url('../fonts/Mark-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark';
+  src: url('../fonts/Mark-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark';
+  src: url('../fonts/Mark-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark';
+  src: url('../fonts/Mark-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SophiaReign';
+  src: url('../fonts/SophiaReign.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwashBandakala';
+  src: url('../fonts/Swash-Bandakala.otf') format('opentype');
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -218,7 +262,7 @@
   
   /* Section Components */
   .section {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-10 md:py-12 lg:py-14;
   }
   
   .section-dark {
@@ -362,4 +406,44 @@
   .focus-visible-custom:focus-visible {
     @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-primary;
   }
+}
+
+/* ===== Ticker ===== */
+
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    background: black; /* Cambia por el color que desees */
+    color: #fff;
+    padding: 12px 0;
+    position: relative;
+}
+
+.ticker-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    white-space: nowrap;
+    animation: tickerMove 30s linear infinite;
+}
+
+.ticker-track span {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 40px;
+    font-size: 0.95rem;
+}
+
+.ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+@keyframes tickerMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
