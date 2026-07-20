@@ -2008,6 +2008,10 @@ input::placeholder, textarea::placeholder {
   background-color: rgb(195 137 20 / var(--tw-bg-opacity, 1));
 }
 
+.bg-secondary\/10 {
+  background-color: rgb(195 137 20 / 0.1);
+}
+
 .bg-secondary\/20 {
   background-color: rgb(195 137 20 / 0.2);
 }
@@ -2038,10 +2042,6 @@ input::placeholder, textarea::placeholder {
   background-color: rgb(255 255 255 / 0.2);
 }
 
-.bg-secondary\/10 {
-  background-color: rgb(195 137 20 / 0.1);
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2069,10 +2069,6 @@ input::placeholder, textarea::placeholder {
 
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
-.to-black {
-  --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
 .object-contain {
@@ -2893,10 +2889,6 @@ input::placeholder, textarea::placeholder {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-\[1\.25fr_0\.75fr\] {
-    grid-template-columns: 1.25fr 0.75fr;
   }
 
   .lg\:gap-8 {
