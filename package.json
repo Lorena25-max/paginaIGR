@@ -13,10 +13,11 @@
   },
 
   "scripts": {
-    "build:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css",
-    "watch:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
-    "dev": "npm run watch:css"
-  },
+  "build": "npm run build:css",
+  "build:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css",
+  "watch:css": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
+  "dev": "npm run watch:css"
+},
 
   "author": "",
   "license": "MIT",
