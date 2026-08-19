@@ -1256,6 +1256,54 @@ input::placeholder, textarea::placeholder {
   }
 }
 
+.donation-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.donation-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.donation-card-btn {
+    margin-top: auto;
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.resource-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.resource-card-btn {
+    margin-top: auto;
+}
+
+.ministry-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ministry-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ministry-card-btn {
+    margin-top: auto;
+}
+
 /* Typography Components */
 
 .text-gradient-gold {
