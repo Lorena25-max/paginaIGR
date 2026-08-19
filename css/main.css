@@ -2254,6 +2254,14 @@ input::placeholder, textarea::placeholder {
   font-family: Mark, sans-serif;
 }
 
+.font-accent {
+  font-family: SophiaReign, cursive;
+}
+
+.font-script {
+  font-family: SwashBandakala, cursive;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2.25rem;
