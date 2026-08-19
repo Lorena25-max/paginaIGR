@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fgracecomm2101back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
-  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  
   </head>
 <body class="bg-primary text-text-primary">
     <!-- Navigation Header -->
@@ -112,10 +112,7 @@
                 <br>
                 <br>
                 <br>
-                <br>
-                <br>
-                <br>
-                <br>
+               
                 
             </div>
         </div>
@@ -137,7 +134,8 @@
             <br>
             <br>
             <br>
-            <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider mb-6 fade-in">Palabra profética 2026</h2>
+            <br>
+            <!-- <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider mb-6 fade-in">Palabra profética 2026</h2> -->
             <!-- Contenedor del video -->
              <div class="group relative max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden border-2 shadow-lg fade-in"
      style="border-color: var(--brand-gold); box-shadow: 0 0 25px rgba(195, 137, 20, 0.2);">
@@ -149,112 +147,240 @@
 </div>
 </section>
 
-   <!-- SERVICE TIMES SECTION -->
-<section id="service-times" class="py-24 bg-black">
+   <!-- SERVICE TIMES SECTION - CARRUSEL -->
+<section id="service-times" class="py-24 bg-black overflow-hidden">
 
-    <div class="max-w-[1000px] mx-auto px-8">
+    <div class="max-w-[1300px] mx-auto px-8">
 
         <!-- TITULO -->
         <div class="text-center mb-16">
             <h2 class="font-headline text-4xl md:text-5xl font-bold mb-5 text-white">
-                ¿Qué tal <span class="text-gradient-gold">si vienes?</span>
+                ¿Qué tal si <span class="text-gradient-gold">vienes a casa?</span>
             </h2>
             <p class="text-gray-400 text-lg max-w-2xl mx-auto">
                 Encuentra un lugar para compartir, crecer y vivir la presencia de Dios juntos.
             </p>
         </div>
 
-        <!-- GRID -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- CARRUSEL -->
+        <div class="relative">
 
-            <!-- CARD -->
-            <div class="bg-[#151515] border border-yellow-600/30 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
+            <button id="carousel-prev" class="carousel-arrow carousel-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
 
-                <img src="images/iglesia.jpeg" class="aspect-[4/5] w-full object-cover">
-                <br>
+            <button id="carousel-next" class="carousel-arrow carousel-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
 
-                <div class="p-5">
-                    <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">
-                        Servicio Familiar
-                    </h3>
+            <div id="carousel-track" class="carousel-track">
 
-                    <p class="text-gray-300 text-sm mb-3">
-                        Carrera 80E #40-131 Tercer piso
-                    </p>
-
-                    <p class="text-yellow-400 font-semibold text-sm">
-                        Sábado 6:00 PM <br>
-                        Domingo 10:00 AM
-                    </p>
+                <!-- CARD 1 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-img">
+                        <img src="images/iglesia.jpeg" alt="Servicio Familiar">
+                    </div>
+                    <div class="carousel-card-body">
+                        <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">Reuniones </h3>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Carrera 80E #40-131 Tercer piso</p>
+                        <p class="text-yellow-400 font-semibold text-sm text-center mb-6">
+                            Sábado 6:00 PM <br> Domingo 10:00 AM
+                        </p>
+                        <a href="https://wa.me/573171555338?text=Hola%2C%20quiero%20asistir%20a%20la%20iglesia"
+                           target="_blank" class="btn-secondary text-center carousel-card-btn">
+                            Quiero asistir
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- CARD 2 -->
-            <div class="bg-[#151515] border border-yellow-600/30 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-
-                <img src="images/avivamientosur.jpeg" class="aspect-[4/5] w-full object-cover">
-
-                <div class="p-5">
-                    <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">
-                        Avivamiento sur
-                    </h3>
-
-                    <p class="text-gray-300 text-sm mb-3">Envigado</p>
-
-                    <p class="text-yellow-400 font-semibold text-sm">
-                        Lunes 7:00 PM
-                    </p>
+                <!-- CARD 2 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-img">
+                        <img src="images/avivamientosur.jpeg" alt="Avivamiento Sur">
+                    </div>
+                    <div class="carousel-card-body">
+                        <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">Avivamiento Sur</h3>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Grupo presencial</p>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Envigado</p>
+                        <p class="text-yellow-400 font-semibold text-sm text-center mb-6">Lunes 7:00 PM</p>
+                        <a href="https://wa.me/573171555338?text=Hola%2C%20quiero%20asistir%20a%20la%20iglesia"
+                           target="_blank" class="btn-secondary text-center carousel-card-btn">
+                            Quiero asistir
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- CARD 3 -->
-            <div class="bg-[#151515] border border-yellow-600/30 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-
-                <img src="images/avivamientolaureles.jpeg" class="aspect-[4/5] w-full object-cover">
-
-                <div class="p-5">
-                    <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">
-                        Avivamiento Laureles
-                    </h3>
-
-                    <p class="text-gray-300 text-sm mb-3">Laureles</p>
-
-                    <p class="text-yellow-400 font-semibold text-sm">
-                        Lunes 7:00 PM
-                    </p>
+                <!-- CARD 3 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-img">
+                        <img src="images/avivamientolaureles.jpeg" alt="Avivamiento Laureles">
+                    </div>
+                    <div class="carousel-card-body">
+                        <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">Avivamiento Laureles</h3>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Grupo presencial</p>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Laureles</p>
+                        <p class="text-yellow-400 font-semibold text-sm text-center mb-6">Martes 7:00 PM</p>
+                        <a href="https://wa.me/573171555338?text=Hola%2C%20quiero%20asistir%20a%20la%20iglesia"
+                           target="_blank" class="btn-secondary text-center carousel-card-btn">
+                            Quiero asistir
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- CARD 4 -->
-            <div class="bg-[#151515] border border-yellow-600/30 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-
-                <img src="images/avivamientonorte.jpeg" class="aspect-[4/5] w-full object-cover">
-
-                <div class="p-5">
-                    <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">
-                        Avivamiento Norte / Virtual
-                    </h3>
-
-                    <p class="text-gray-300 text-sm mb-3">Cabañas, Bello y Virtual</p>
-
-                    <p class="text-yellow-400 font-semibold text-sm">
-                        Martes 7:00 PM
-                    </p>
+                <!-- CARD 4 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-img">
+                        <img src="images/avivamientonorte.jpeg" alt="Avivamiento Norte / Virtual">
+                    </div>
+                    <div class="carousel-card-body">
+                        <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">Avivamiento Norte</h3>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Grupo presencial</p>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Cabañas, Bello </p>
+                        <p class="text-yellow-400 font-semibold text-sm text-center mb-6">Martes 7:00 PM</p>
+                        <a href="https://wa.me/573171555338?text=Hola%2C%20quiero%20asistir%20a%20la%20iglesia"
+                           target="_blank" class="btn-secondary text-center carousel-card-btn">
+                            Quiero asistir
+                        </a>
+                    </div>
                 </div>
-            </div>
 
+                <!-- CARD 5 (edita imagen, título, dirección y horario) -->
+                <div class="carousel-card">
+                    <div class="carousel-card-img">
+                        <img src="images/nueva-sede.jpeg" alt="Nombre de la sede">
+                    </div>
+                    <div class="carousel-card-body">
+                        <h3 class="text-yellow-500 font-bold text-xl mb-4 text-center">Avivamiento virtual</h3>
+                        <p class="text-gray-300 text-sm mb-3 text-center">Grupo virtual</p>
+                        <p class="text-yellow-400 font-semibold text-sm text-center mb-6">Jueves 7:00 PM</p>
+                        <a href="https://wa.me/573171555338?text=Hola%2C%20quiero%20asistir%20a%20la%20iglesia"
+                           target="_blank" class="btn-secondary text-center carousel-card-btn">
+                            Quiero asistir
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
-    <div class="text-center mt-12">
-    <a href="https://wa.me/573171555338?text=Hola%2C%20quiero%20asistir%20a%20la%20iglesia"
-       target="_blank"
-       class="btn-secondary">
-        Quiero asistir
-    </a>
-</div>
 
 </section>
+
+<style>
+    .carousel-track {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding-bottom: 24px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .carousel-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-card {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+        width: 82%;
+        max-width: 300px;
+        background: #151515;
+        border: 1px solid rgba(202, 138, 4, 0.3);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .carousel-card-img {
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        background: #0d0d0d;
+    }
+    .carousel-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .carousel-card-body {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .carousel-card-btn {
+        margin-top: auto;
+    }
+
+    .carousel-arrow {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        border-radius: 9999px;
+        background: #151515;
+        border: 1px solid rgba(202, 138, 4, 0.4);
+        color: #eab308;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .carousel-arrow:hover {
+        background: #ca8a04;
+        color: #000;
+    }
+    .carousel-arrow-left { left: -24px; }
+    .carousel-arrow-right { right: -24px; }
+
+    @media (min-width: 768px) {
+        .carousel-arrow { display: flex; }
+        .carousel-card { width: 300px; }
+    }
+</style>
+
+<script>
+    (function () {
+        const track = document.getElementById('carousel-track');
+        const prevBtn = document.getElementById('carousel-prev');
+        const nextBtn = document.getElementById('carousel-next');
+
+        if (!track || !prevBtn || !nextBtn) return;
+
+        function getCardWidth() {
+            const firstCard = track.querySelector('.carousel-card');
+            if (!firstCard) return 300;
+            const gap = 24;
+            return firstCard.offsetWidth + gap;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+    })();
+</script>
+
 <!-- PREDICAS -->
 <section class="py-24 bg-black">
 
@@ -375,132 +501,138 @@
 
 </section>
     <!-- Featured Projects -->
-    <section class="section bg-black">
-        <div class="container-custom">
-            <div class="text-center mb-16">
-                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
-                    Únete <span class="text-gradient-gold">a la visión</span>
-                </h2>
-                <p class="text-xl text-text-secondary max-w-2xl mx-auto">
-                    Dios está haciendo algo grande, y tú puedes ser parte. <br>A través de tu siembra, seguimos extendiendo el Reino y restaurando vidas.
-
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="card group hover:shadow-gold transition-all duration-300">
-                    <div class="relative mb-6 overflow-hidden rounded-xl">
-                        <img src="images/Iglesiainicio.jpg" 
-                             alt="Proyecto 1" 
-                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
-                             loading="lazy"
-                             onerror="this.src='https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
-                        <div class="absolute top-4 right-4">
-                            
-                        </div>
-                    </div>
-                    <h3 class="font-headline text-2xl font-semibold mb-3"></h3>
-                    <p class="text-text-secondary mb-4 leading-relaxed">
-                        Estamos fortaleciendo nuestra casa para crear un espacio donde la presencia de Dios siga transformando vidas.
-                        <ul>
-                            <li>Cámaras PTZ</li>
-                            <li>Pantalla LED</li>
-                            <li>Instrumentos de adoración</li>
-                        </ul>
-                        <br>
-                        
-                    </p>
-                    
-                    <div class="flex gap-3">
-                        <a href="projects.html" class="btn-primary flex-1 justify-center">
-                            Donar Ahora
-                        </a>
-                        <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="card group hover:shadow-gold transition-all duration-300">
-                    <div class="relative mb-6 overflow-hidden rounded-xl">
-                        <img src="images/Colegio FARO.png" 
-                             alt="Colegio faro" 
-                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
-                             loading="lazy"
-                             onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
-                        <div class="absolute top-4 right-4">
-                            <!-- <span class="badge-success">Activo</span> -->
-                        </div>
-                    </div>
-                    <h3 class="font-headline text-2xl font-semibold mb-3"></h3>
-                    <p class="text-text-secondary mb-4 leading-relaxed">
-                        Anhelamos formar una nueva generación en la verdad, guiados por el Espíritu Santo y desarrollando sus dones desde pequeños.
-
-                        <ul>
-                            <li>Adecuación de espacios educativos</li>
-                            <li>Apadrina un niño para su formación</li>
-                        </ul>
-                    </p>
-                    <br>
-
-                    <div class="flex gap-3">
-                        <a href="projects.html" class="btn-primary flex-1 justify-center">
-                            Donar Ahora
-                        </a>
-                        <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="card group hover:shadow-gold transition-all duration-300">
-                    <div class="relative mb-6 overflow-hidden rounded-xl">
-                        <img src="images/misiones.jpg" 
-                             alt="Misiones" 
-                             class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
-                             loading="lazy"
-                             onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
-                        <div class="absolute top-4 right-4">
-                            <!-- <span class="badge-warning">Nuevo</span> -->
-                        </div>
-                    </div>
-                    <h3 class="font-headline text-2xl font-semibold mb-3"></h3>
-                    <p class="text-text-secondary mb-4 leading-relaxed">
-                        Creemos en un lugar donde el cielo toca la tierra.
-                        <ul>
-                            <li>Ayúdanos a construir nuestra sede propia</li>
-                        </ul>
-                    
-                    </p>
-                    <br>
-                    <div class="flex gap-3">
-                        <a href="projects.html" class="btn-primary flex-1 justify-center">
-                            Donar Ahora
-                        </a>
-                        <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- View All Projects -->
-            <div class="text-center mt-12">
-                <a href="projects.html" class="btn-secondary">
-                    Ver todos los proyectos
-                    
-                </a>
-            </div>
+<section class="section bg-black">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">
+                Únete <span class="text-gradient-gold">a la visión</span>
+            </h2>
+            <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                Dios está haciendo algo grande, y tú puedes ser parte. <br>
+                A través de tu siembra, seguimos extendiendo el Reino y restaurando vidas.
+            </p>
         </div>
-    </section>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+
+            <!-- Project 1 -->
+            <div class="card group hover:shadow-gold transition-all duration-300 flex flex-col h-full">
+                <div class="relative mb-6 overflow-hidden rounded-xl">
+                    <img src="images/iglesia1.jpeg"
+                         alt="Fortalecimiento de la casa"
+                         class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy"
+                         onerror="this.src='https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                </div>
+
+                <!-- <h3 class="font-headline text-2xl font-semibold mb-3">
+                    Fortalecimiento de la Casa
+                </h3> -->
+
+                <div class="text-text-secondary mb-4 leading-relaxed flex-1">
+                    <p class="mb-3">
+                        Estamos fortaleciendo nuestra casa para crear un espacio donde la presencia de Dios siga transformando vidas.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Cámaras PTZ</li>
+                        <li>Pantalla LED</li>
+                        <li>Instrumentos de adoración</li>
+                    </ul>
+                </div>
+
+                <div class="flex gap-3 mt-auto">
+                    <a href="donations.html" class="btn-primary flex-1 justify-center">
+                        Donar Ahora
+                    </a>
+                    <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card group hover:shadow-gold transition-all duration-300 flex flex-col h-full">
+                <div class="relative mb-6 overflow-hidden rounded-xl">
+                    <img src="images/FOTO COLEGIO FARO.jpg.jpeg"
+                         alt="Colegio Faro"
+                         class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                </div>
+
+                <!-- <h3 class="font-headline text-2xl font-semibold mb-3">
+                    Colegio Faro
+                </h3> -->
+
+                <div class="text-text-secondary mb-4 leading-relaxed flex-1">
+                    <p class="mb-3">
+                        Anhelamos formar una nueva generación en la verdad, guiados por el Espíritu Santo y desarrollando sus dones desde pequeños.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Adecuación de espacios educativos</li>
+                        <li>Apadrina un niño para su formación</li>
+                    </ul>
+                </div>
+
+                <div class="flex gap-3 mt-auto">
+                    <a href="donations.html" class="btn-primary flex-1 justify-center">
+                        Donar Ahora
+                    </a>
+                    <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card group hover:shadow-gold transition-all duration-300 flex flex-col h-full">
+                <div class="relative mb-6 overflow-hidden rounded-xl">
+                    <img src="images/misiones.jpg"
+                         alt="Misiones"
+                         class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy"
+                         onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                </div>
+
+                <!-- <h3 class="font-headline text-2xl font-semibold mb-3">
+                    Sede Propia
+                </h3> -->
+
+                <div class="text-text-secondary mb-4 leading-relaxed flex-1">
+                    <p class="mb-3">
+                        Creemos en un lugar donde el cielo toca la tierra.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Ayúdanos a construir nuestra sede propia</li>
+                    </ul>
+                </div>
+
+                <div class="flex gap-3 mt-auto">
+                    <a href="donations.html" class="btn-primary flex-1 justify-center">
+                        Donar Ahora
+                    </a>
+                    <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- View All Projects -->
+        <div class="text-center mt-12">
+            <a href="projects.html" class="btn-secondary">
+                Ver todos los proyectos
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Location & Map Section -->
     <section id="location" class="section bg-primary">
@@ -900,8 +1032,7 @@
         document.querySelectorAll('.card, .card-elevated, .card-gold').forEach(el => {
             observer.observe(el);
         });
-    </script>
+    
 <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
-
 </body>
 </html>
