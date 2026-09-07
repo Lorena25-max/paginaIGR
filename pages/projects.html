@@ -768,6 +768,47 @@ Durante los últimos años Dios nos ha permitido servir en Colombia y en diferen
     }
 </style>
 
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const track = document.getElementById('testimonial-track');
+        const prevBtn = document.getElementById('testimonial-prev');
+        const nextBtn = document.getElementById('testimonial-next');
+
+        if (!track || !prevBtn || !nextBtn) {
+            console.warn('Carrusel de testimonios: no se encontraron los elementos en el DOM.');
+            return;
+        }
+
+        function getStep() {
+            const firstCard = track.querySelector('.testimonial-card');
+            if (!firstCard) return 300;
+            const gap = 24;
+            return firstCard.offsetWidth + gap;
+        }
+
+        prevBtn.addEventListener('click', function () {
+            track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', function () {
+            track.scrollBy({ left: getStep(), behavior: 'smooth' });
+        });
+    });
+</script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const track = document.getElementById('testimonial-track');
