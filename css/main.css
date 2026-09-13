@@ -2971,3 +2971,18 @@ input::placeholder, textarea::placeholder {
     line-height: 2rem;
   }
 }
+
+/* Ocultar el widget de Google fuera de la pantalla (en vez de display:none, 
+   para que Google sí pueda construirlo correctamente) */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+#google_translate_element {
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+}

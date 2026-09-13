@@ -42,12 +42,10 @@
                 <!-- Language Switcher & Mobile Menu -->
                 <div class="flex items-center gap-4">
                     <div class="hidden md:flex items-center gap-2 bg-surface px-3 py-2 rounded-lg">
-                        <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors" aria-label="Cambiar a español">ES</button>
-                        <span class="text-text-tertiary">|</span>
-                        <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Switch to English">EN</button>
-                        <span class="text-text-tertiary">|</span>
-                        <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Mudar para português">PT</button>
-                    </div>
+                                                                        <div id="google_translate_element"></div>
+                        <button data-lang-btn="es" onclick="doGTranslate('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors">ES</button>
+                        <button data-lang-btn="en" onclick="doGTranslate('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">EN</button>
+                        <button data-lang-btn="pt" onclick="doGTranslate('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">PT</button></div>
                     
                     <!-- Mobile Menu Button -->
                     <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-surface rounded-lg transition-colors" aria-label="Abrir menú de navegación">
@@ -69,9 +67,9 @@
                 <a href="blog.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Blog</a>
                 <a href="donations.html" class="btn-primary w-full justify-center mt-4">Donar Ahora</a>
                 <div class="flex items-center gap-4 pt-4 border-t border-border-subtle">
-                    <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary">Español</button>
-                    <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
-                    <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
+                                                            <button data-lang-btn="es" onclick="doGTranslate('es')" class="text-sm font-medium text-secondary">Español</button>
+                    <button data-lang-btn="en" onclick="doGTranslate('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
+                    <button data-lang-btn="pt" onclick="doGTranslate('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button></div>
                 </div>
             </div>
         </div>
@@ -123,13 +121,13 @@
             </h1>
             <br>
             <br>
-            <p class="text-xl md:text-2xl text-text-secondary font-body leading-relaxed max-w-3xl mx-auto">Una familia centrada en Jesucristo, guiados por el amor del Padre <br>y el poder del Espíritu Santo. <br>Nuestra misión es acompañarte de manera integral hacia la restauración del diseño original de Dios para tu vida.​<br><br><h1 class="font-headline text-5xl md:text-3xl lg:text-3xl font-bold leading-tight">
-                    <h2 class="font-headline text-5xl md:text-5xl font-bold mb-5 text-white">
-                        <span class="font-accent text-gradient-gold">¡Más que una iglesia, somos una familia!
-  </span><br>
-                <span class="text-gradient-gold">¡Más que una iglesia, somos una familia!</span>
+                        <p class="text-xl md:text-2xl text-text-secondary font-body leading-relaxed max-w-3xl mx-auto">
+                Una familia centrada en Jesucristo, guiados por el amor del Padre <br>y el poder del Espíritu Santo. <br>Nuestra misión es acompañarte de manera integral hacia la restauración del diseño original de Dios para tu vida.
+            </p>
+            <br>
+            <h2 class="font-headline text-5xl md:text-5xl font-bold mb-5 text-white">
+                <span class="font-accent text-gradient-gold">¡Más que una iglesia, somos una familia!</span>
             </h2>
-            </h1></p>
             <br>
             <br>
             <br>
@@ -543,10 +541,8 @@
                     <a href="donations.html" class="btn-primary flex-1 justify-center">
                         Donar Ahora
                     </a>
-                    <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                    <a href="projects.html" class="btn-primary flex-1 justify-center">
+                        Ver más
                     </a>
                 </div>
             </div>
@@ -579,10 +575,8 @@
                     <a href="donations.html" class="btn-primary flex-1 justify-center">
                         Donar Ahora
                     </a>
-                    <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                    <a href="projects.html" class="btn-primary flex-1 justify-center">
+                        Ver más
                     </a>
                 </div>
             </div>
@@ -612,10 +606,8 @@
                     <a href="donations.html" class="btn-primary flex-1 justify-center">
                         Donar Ahora
                     </a>
-                    <a href="projects.html" class="btn-outline px-4" aria-label="Ver más detalles del proyecto">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                    <a href="projects.html" class="btn-primary flex-1 justify-center">
+                        Ver más
                     </a>
                 </div>
             </div>
@@ -715,7 +707,7 @@
                             <div class="flex-1">
                                 <h3 class="font-headline text-xl font-semibold mb-2">Email</h3>
                                 <p class="text-text-secondary mb-2">
-                                    <a href="mailto:info@gracecommunity.org" class="hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
+                                    <a href="mailto:pastoralccrmedellin@gmail.com" class="hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
                                 </p>
                                 <p class="text-text-tertiary text-sm">
                                     Responderemos dentro de 24 horas
@@ -942,7 +934,7 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
                             <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
-                            <a href="mailto:info@gracecommunity.org" class="text-sm hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
+                            <a href="mailto:pastoralccrmedellin@gmail.com" class="text-sm hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -973,18 +965,16 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Language Switcher
-        function switchLanguage(lang) {
-            console.log('Switching to language:', lang);
-            // In a real implementation, this would change the page language
-            alert(`Cambiando idioma a: ${lang.toUpperCase()}`);
-        }
 
-        // Newsletter Form Submission
+
+                // Newsletter Form Submission
         function handleNewsletterSubmit(event) {
             event.preventDefault();
             const email = event.target.querySelector('input[type="email"]').value;
-            alert(`¡Gracias por suscribirte! Confirmaremos tu suscripción en ${email}`);
+            const asunto = encodeURIComponent('Quiero suscribirme al newsletter');
+            const cuerpo = encodeURIComponent(`Hola, quiero suscribirme al newsletter de la Iglesia Global de Restauración.\n\nMi correo es: ${email}`);
+            window.location.href = `mailto:pastoralccrmedellin@gmail.com?subject=${asunto}&body=${cuerpo}`;
+            alert('Se abrirá tu correo para confirmar la suscripción. Si no se abre automáticamente, escríbenos a pastoralccrmedellin@gmail.com');
             event.target.reset();
         }
 
@@ -1026,5 +1016,8 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
         });
     </script>
 <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+<script src="../js/cookies.js"></script>
+<script src="../js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

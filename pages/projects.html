@@ -127,11 +127,10 @@
                 <!-- Language Switcher & Mobile Menu -->
                 <div class="flex items-center gap-4">
                     <div class="hidden md:flex items-center gap-2 bg-surface px-3 py-2 rounded-lg">
-                        <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors" aria-label="Cambiar a español">ES</button>
-                        <span class="text-text-tertiary">|</span>
-                        <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Switch to English">EN</button>
-                        <span class="text-text-tertiary">|</span>
-                        <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Mudar para português">PT</button>
+                                                <div id="google_translate_element"></div>
+                        <button data-lang-btn="es" onclick="doGTranslate('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors">ES</button>
+                        <button data-lang-btn="en" onclick="doGTranslate('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">EN</button>
+                        <button data-lang-btn="pt" onclick="doGTranslate('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">PT</button>
                     </div>
                     
                     <!-- Mobile Menu Button -->
@@ -154,9 +153,9 @@
                 <a href="blog.html" class="block py-2 text-text-primary hover:text-secondary transition-colors">Blog</a>
                 <a href="donations.html" class="btn-primary w-full justify-center mt-4">Donar Ahora</a>
                 <div class="flex items-center gap-4 pt-4 border-t border-border-subtle">
-                    <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary">Español</button>
-                    <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
-                    <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
+                                        <button data-lang-btn="es" onclick="doGTranslate('es')" class="text-sm font-medium text-secondary">Español</button>
+                    <button data-lang-btn="en" onclick="doGTranslate('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
+                    <button data-lang-btn="pt" onclick="doGTranslate('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
                 </div>
             </div>
         </div>
@@ -338,8 +337,8 @@
 
                 </h2>
 
-                <p class="text-gray-400 mt-4 max-w-xl">
-                Con tu apoyo, podemos seguir transformando más vidas cada día
+                                <p class="text-gray-400 mt-4 max-w-xl">
+                Con tu apoyo, podemos seguir transformando más vidas cada&nbsp;día
                 </p>
 
             </div>
@@ -1247,6 +1246,47 @@ Durante los últimos años Dios nos ha permitido servir en Colombia y en diferen
 
 </section>
 
+    <!-- Newsletter Signup -->
+    <section class="section bg-surface">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <svg class="w-16 h-16 text-secondary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">
+                    Mantente <span class="text-gradient-gold">conectado</span>
+                </h2>
+                <p class="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+                    Recibe actualizaciones semanales, devocionales inspiradores <br>y noticias de la comunidad directamente en tu correo
+                </p>
+
+                <form class="max-w-xl mx-auto" onsubmit="handleNewsletterSubmit(event)">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input
+                            type="email"
+                            placeholder="Tu correo electrónico"
+                            required
+                            class="form-input flex-1"
+                            aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn-primary whitespace-nowrap">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Suscribirme
+                        </button>
+                    </div>
+                    <p class="text-text-tertiary text-sm mt-4">
+                        Al suscribirte, aceptas recibir correos de la Iglesia Global de Restauración. <br> Puedes cancelar en cualquier momento.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
 <!-- Footer -->
     <footer class="bg-primary border-t border-border-subtle py-12">
         <div class="container-custom">
@@ -1341,7 +1381,7 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
                             <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
-                            <a href="mailto:info@gracecommunity.org" class="text-sm hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
+                            <a href="mailto:info@gracecommunity.orpastoralccrmedellin@gmail.com>pastoralccrmedellin@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -1387,6 +1427,21 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
     }
 
 </script>
+
+<script>
+    function handleNewsletterSubmit(event) {
+        event.preventDefault();
+        const email = event.target.querySelector('input[type="email"]').value;
+        const asunto = encodeURIComponent('Quiero suscribirme al newsletter');
+        const cuerpo = encodeURIComponent(`Hola, quiero suscribirme al newsletter de la Iglesia Global de Restauración.\n\nMi correo es: ${email}`);
+        window.location.href = `mailto:pastoralccrmedellin@gmail.com?subject=${asunto}&body=${cuerpo}`;
+        alert('Se abrirá tu correo para confirmar la suscripción. Si no se abre automáticamente, escríbenos a pastoralccrmedellin@gmail.com');
+        event.target.reset();
+    }
+</script>
+<script src="../js/cookies.js"></script>
+<script src="../js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 </body>

@@ -41,11 +41,10 @@
                 <!-- Language Switcher & Mobile Menu -->
                 <div class="flex items-center gap-4">
                     <div class="hidden md:flex items-center gap-2 bg-surface px-3 py-2 rounded-lg">
-                        <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors" aria-label="Cambiar a español">ES</button>
-                        <span class="text-text-tertiary">|</span>
-                        <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Switch to English">EN</button>
-                        <span class="text-text-tertiary">|</span>
-                        <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors" aria-label="Mudar para português">PT</button>
+                                                <div id="google_translate_element"></div>
+                        <button data-lang-btn="es" onclick="doGTranslate('es')" class="text-sm font-medium text-secondary hover:text-accent transition-colors">ES</button>
+                        <button data-lang-btn="en" onclick="doGTranslate('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">EN</button>
+                        <button data-lang-btn="pt" onclick="doGTranslate('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">PT</button>
                     </div>
                     
                     <!-- Mobile Menu Button -->
@@ -68,9 +67,9 @@
                 <a href="blog.html" class="block py-2 text-secondary font-medium">Blog</a>
                 <a href="donations.html" class="btn-primary w-full justify-center mt-4">Donar Ahora</a>
                 <div class="flex items-center gap-4 pt-4 border-t border-border-subtle">
-                    <button onclick="switchLanguage('es')" class="text-sm font-medium text-secondary">Español</button>
-                    <button onclick="switchLanguage('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
-                    <button onclick="switchLanguage('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
+                                        <button data-lang-btn="es" onclick="doGTranslate('es')" class="text-sm font-medium text-secondary">Español</button>
+                    <button data-lang-btn="en" onclick="doGTranslate('en')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">English</button>
+                    <button data-lang-btn="pt" onclick="doGTranslate('pt')" class="text-sm font-medium text-text-secondary hover:text-secondary transition-colors">Português</button>
                 </div>
             </div>
         </div>
@@ -644,7 +643,7 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
                             <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
-                            <a href="mailto:info@gracecommunity.org" class="text-sm hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
+                            <a href="mailto:pastoralccrmedellin@gmail.com" class="text-sm hover:text-secondary transition-colors">pastoralccrmedellin@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -758,11 +757,14 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
             // In a real implementation, this would fetch more articles from the server
         }
 
-        // Newsletter Form Submission
+                // Newsletter Form Submission
         function handleNewsletterSubmit(event) {
             event.preventDefault();
             const email = event.target.querySelector('input[type="email"]').value;
-            alert(`¡Gracias por suscribirte! Confirmaremos tu suscripción en ${email}`);
+            const asunto = encodeURIComponent('Quiero suscribirme al newsletter');
+            const cuerpo = encodeURIComponent(`Hola, quiero suscribirme al newsletter de la Iglesia Global de Restauración.\n\nMi correo es: ${email}`);
+            window.location.href = `mailto:pastoralccrmedellin@gmail.com?subject=${asunto}&body=${cuerpo}`;
+            alert('Se abrirá tu correo para confirmar la suscripción. Si no se abre automáticamente, escríbenos a pastoralccrmedellin@gmail.com');
             event.target.reset();
         }
 
@@ -805,5 +807,9 @@ rel="noopener noreferrer" class="bg-surface hover:bg-secondary w-12 h-12 rounded
     </script>
 <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 <script src="js/i18n.js"></script>
+
+<script src="../js/cookies.js"></script>
+<script src="../js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
